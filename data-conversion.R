@@ -1,13 +1,7 @@
 source("/Users/JoelSilver/PROJECTS/WORK/CURRENT/ACIP/R/mongolia/super-secret-code.R")
-
-writeLines(cat("
-    Hey there
-    I'm Joel.
-    How are you?
-    ", "README.md"))
-
-
-writeLines(your_string, "README.md")
+Sys.setenv(TZ='America/Los_Angeles')
+date <- format(Sys.time(), "%a %b %d %X %Y")
+writeLines(c("Export created at: ", date), paste(dir.root, "README.md", sep = "/"))
 
 sheet.volumes <- "BDRC-ACIP-Catalog-SingleVolumeWorks"
 sheet.uuree.titles <- "Uuree-ACIP-Title-Level-Catalog"
